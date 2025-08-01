@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from dotenv import load_dotenv
+from planner import planner_bp
 import os
 
 from auth import auth_bp
@@ -17,6 +18,7 @@ jwt = JWTManager(app)
 
 # Register Blueprints
 app.register_blueprint(auth_bp, url_prefix="/api/auth")
+app.register_blueprint(planner_bp, url_prefix="/api/planner")
 
 @app.route('/')
 def home():
