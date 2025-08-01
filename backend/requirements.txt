@@ -4,3 +4,5 @@ pymongo
 Flask-JWT-Extended
 python-dotenv
 bcrypt
+google.generativeai
+requests
